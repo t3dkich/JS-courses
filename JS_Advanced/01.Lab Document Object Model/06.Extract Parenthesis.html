@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="content">
+        rakiq (Bulgarian brandy) nqkvi drugi tapni tam.
+        oshte malko (alcoholic drink) piini da ima basi!
+        i pushenka malko :D:D (even apples)
+    </p>
+
+<script>
+    function result() {
+        let content = document.getElementById('content').textContent
+        let pattern = /\(.+\)/g
+        let match = content.match(pattern)
+        return match.map(e => e.substring(1, e.length - 1)).join('; ')
+    }
+</script>
+</body>
+</html>

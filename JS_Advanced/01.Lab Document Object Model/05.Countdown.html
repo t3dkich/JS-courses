@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="time" style="border:3px solid blue; text-align:center; font-size:2em;" disabled="true"/>
+<script>window.onload = function() { countdown(600); }</script>
+<script>
+    function countdown(ct) {
+        let currentTime = +ct
+        let clock = document.getElementById('time')
+        let timer = setInterval(decrement, 1000)
+        function decrement() {
+            currentTime--
+            if (currentTime === 0) window.clearInterval(timer)
+            let minutes = Math.floor(currentTime / 60)
+            let seconds = ('0' + currentTime % 60).slice(-2)
+            clock.value = minutes + ':' + seconds
+        }
+
+    }
+</script>
+</body>
+</html>

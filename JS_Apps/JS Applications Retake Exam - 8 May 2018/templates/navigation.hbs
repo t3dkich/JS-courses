@@ -1,0 +1,22 @@
+<nav>
+    <div class="left-container">
+        {{#if isAuth}}
+            <ul>
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/myFlights">Flights</a></li>
+            </ul>
+            <div class="right-container">
+                <span>Welcome, {{usr}} |</span>
+                <a href="#/logout" class="log-out">Logout</a>
+            </div>
+        {{else}}
+            <ul>
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/login">Login</a></li>
+                <li><a href="#/register">Register</a></li>
+            </ul>
+        {{/if}}
+
+    </div>
+
+</nav>
